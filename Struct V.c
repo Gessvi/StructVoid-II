@@ -12,7 +12,7 @@ int main()
         char nome[200];
         float nota;
         float media;
-        int idd;
+        int idade;
         float soma;
     };
 
@@ -24,9 +24,10 @@ int main()
     {
         printf("Insira seu nome: \n");
         gets(aluno[i].nome);
-        printf("Insira sua idade: \n");
 
-        scanf("%d", &aluno[i].idd);
+        printf("Insira sua idade: \n");
+        scanf("%d", &aluno[i].idade);
+
         fflush(stdin);
 
         for (j = 0; j < 2; j++)
@@ -36,6 +37,7 @@ int main()
 
             aluno[i].soma += aluno[i].nota;
         }
+        printf("°---------------- ° -----------------° \n");
         fflush(stdin);
         aluno[i].media = aluno[i].soma / j;
     }
@@ -46,8 +48,9 @@ int main()
 
     for (i = 0; i < 3; i++)
     {
-        printf ("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< \n");
+        printf("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< \n");
         printf("Nome do aluno: %s \n", aluno[i].nome);
+        printf("Idade do Aluno: %d \n", aluno[i].idade);
 
         for (j = 0; j < 2; j++)
         {
@@ -55,20 +58,19 @@ int main()
         }
 
         printf("media:%1.f\n", aluno[i].media);
-        printf("soma das notas:%1.f\n", aluno[i].soma);
         printf("\n");
 
         if (aluno[i].media >= 7)
         {
-            printf("Aprovado \n");
+            printf(" \t *APROVADO* \n");
         }
         else if (aluno[i].media >= 5)
         {
-            printf("Recuperacao \n");
+            printf(" \t *RECUPERACAO* \n");
         }
         else
         {
-            printf("Reprovado \n");
+            printf("  \t *REPROVADO* \n");
         }
     }
 
